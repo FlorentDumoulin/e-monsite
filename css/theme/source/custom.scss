@@ -1,0 +1,70 @@
+/**
+ * Black theme for reveal.js.
+ *
+ * Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url(https://fonts.googleapis.com/css?family=Orbitron);
+@import url(https://fonts.googleapis.com/css?family=Electrolize);
+
+
+// Override theme settings (see ../template/settings.scss)
+
+// Colors
+$mainColor: #CCC;
+$baseColor00: #000;
+$baseColor01: #FFF;
+$baseColor02: #FF8800;
+
+$backgroundColor: $baseColor00;
+
+$mainFont: 'Electrolize', sans-serif;
+
+$linkColor: $baseColor02;
+$linkColorHover: lighten( $linkColor, 20% );
+
+$headingFont: 'Orbitron', sans-serif;
+$headingColor: $baseColor01;
+$headingTextShadow: none;
+$headingLetterSpacing: -0.03em;
+$headingTextTransform: none;
+
+$selectionBackgroundColor: $linkColor;
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+/*********************************************
+ * CUSTOM CSS
+ *********************************************/
+// General CSS ------------------------------
+.reveal{
+
+    .color-secondary{
+        color: $baseColor02;
+    }
+    span[class*='fragment']{
+        display: inline-block;
+    }
+    p[class*='fragment']{
+        span.grow{
+            text-transform: uppercase;
+        }
+    } 
+    .progress{
+        span{
+            box-shadow: 1px -1px 0 $baseColor00, 0 0 5px $baseColor02;
+        }
+    }
+
+}
+// ---------------------------------------------
