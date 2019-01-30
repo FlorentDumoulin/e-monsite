@@ -1,9 +1,10 @@
 /**
- * Black theme for reveal.js.
+ * Custom theme for a e-monsite presentation
  *
- * Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
+ * Author Florent Dumoulin
  */
 
+ // Les commentaires uni-ligne ne sont pas visibles une fois le fichier compilé
 
 // Default mixins and settings -----------------
 @import "../template/mixins";
@@ -17,8 +18,6 @@
 
 
 // Override theme settings (see ../template/settings.scss)
-
-// Colors
 $mainColor: #CCC;
 $baseColor00: #000;
 $baseColor01: #FFF;
@@ -46,25 +45,21 @@ $selectionBackgroundColor: $linkColor;
 /*********************************************
  * CUSTOM CSS
  *********************************************/
-// General CSS ------------------------------
 .reveal{
 
+    // General
     .color-secondary{
         color: $baseColor02;
     }
+
+    // Fragments
     span[class*='fragment']{
-        display: inline-block;
+        display: inline-block; // Pour pouvoir utilisé les effets dans un span sur une mm ligne
     }
     p[class*='fragment']{
         span.grow{
             text-transform: uppercase;
         }
-    } 
-    .progress{
-        span{
-            box-shadow: 1px -1px 0 $baseColor00, 0 0 5px $baseColor02;
-        }
     }
 
 }
-// ---------------------------------------------
