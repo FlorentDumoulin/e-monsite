@@ -22,13 +22,14 @@ $mainColor: #CCC;
 $baseColor00: #000;
 $baseColor01: #FFF;
 $baseColor02: #FF8800;
+$baseColor03: #5CB85C;
 
 $backgroundColor: $baseColor00;
 
 $mainFont: 'Electrolize', sans-serif;
 
 $linkColor: $baseColor02;
-$linkColorHover: lighten( $linkColor, 20% );
+$linkColorHover: darken( $linkColor, 15% );
 
 $headingFont: 'Orbitron', sans-serif;
 $headingColor: $baseColor01;
@@ -48,8 +49,23 @@ $selectionBackgroundColor: $linkColor;
 .reveal{
 
     // General
+    h2, h3, h4, h5, h6{
+        color: $linkColorHover;
+    }
+    strong, b{
+        color: darken( $mainColor, 35% );
+    }
     .color-secondary{
         color: $baseColor02;
+    }
+    ul, ol{
+        display: block;
+    }
+    ul{
+        list-style-type: square;
+    }
+    ol{
+        margin: 0 0 0 1.5em;
     }
 
     // Fragments
@@ -58,7 +74,10 @@ $selectionBackgroundColor: $linkColor;
     }
     p[class*='fragment']{
         span.grow{
-            text-transform: uppercase;
+            strong, b{
+                color: $mainColor;
+                text-transform: uppercase;
+            }
         }
     }
 
