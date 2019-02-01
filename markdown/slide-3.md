@@ -17,7 +17,7 @@ Modules : Ils vous permettent d'intégrer facilement des fonctionnalités à vot
 
 Widgets : Ce sont des extensions des modules, ils permettent d'afficher les derniers articles du blog, par exemple.
 
-Plugins : Notament pour l'ajout de services externes comme Disqus et les boutons des réseaux sociaux.
+Plugins : Notamment pour l'ajout de services externes comme Disqus et les boutons des réseaux sociaux.
 
 Espace membres : Il est utile si vous voulez gérer l'accès à certaines parties de votre site selon l'utilisateur ou le groupe d'utilisateur.
 
