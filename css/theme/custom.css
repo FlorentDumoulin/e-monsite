@@ -1,8 +1,8 @@
 /**
- * Custom theme for a e-monsite presentation
- *
- * Author Florent Dumoulin
- */
+* Custom theme for a e-monsite presentation
+*
+* Author Florent Dumoulin
+*/
 @import url(https://fonts.googleapis.com/css?family=Orbitron);
 @import url(https://fonts.googleapis.com/css?family=Electrolize);
 /*********************************************
@@ -271,8 +271,8 @@ body {
     background-color: #000; } }
 
 /*********************************************
- * CUSTOM CSS
- *********************************************/
+* CUSTOM CSS
+*********************************************/
 .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
   color: #b35f00; }
 
@@ -297,3 +297,48 @@ body {
 .reveal p[class*='fragment'] span.grow strong, .reveal p[class*='fragment'] span.grow b {
   color: #CCC;
   text-transform: uppercase; }
+
+/*============================================
+DASHBOARD
+============================================*/
+#dashboard a {
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  bottom: 10%;
+  padding: 0.5em;
+  color: #425b8a;
+  background-color: rgba(13, 19, 26, 0.95);
+  background: -moz-linear-gradient(225deg, rgba(22, 32, 42, 0.95) 0%, rgba(13, 19, 26, 0.95) 77%);
+  background: -webkit-linear-gradient(225deg, rgba(22, 32, 42, 0.95) 0%, rgba(13, 19, 26, 0.95) 77%);
+  background: -o-linear-gradient(225deg, rgba(22, 32, 42, 0.95) 0%, rgba(13, 19, 26, 0.95) 77%);
+  background: -ms-linear-gradient(225deg, rgba(22, 32, 42, 0.95) 0%, rgba(13, 19, 26, 0.95) 77%);
+  background: linear-gradient(225deg, rgba(22, 32, 42, 0.95) 0%, rgba(13, 19, 26, 0.95) 77%);
+  border: 4px double #1b2733;
+  border-left: none;
+  -webkit-box-shadow: 1px 1px 3px #000;
+  box-shadow: 1px 1px 3px #000;
+  -webkit-transition: 240ms;
+  transition: 240ms; }
+  #dashboard a:hover, #dashboard a:focus {
+    padding: 0.5em 1em;
+    color: #678ed6; }
+  #dashboard a i {
+    -webkit-animation: back-arrow 5s ease-out infinite;
+    animation: back-arrow 5s ease-out infinite; }
+
+@-webkit-keyframes back-arrow {
+  5% {
+    transform: translateX(-4px); }
+  10% {
+    transform: translateX(2px); }
+  0%, 15%, 100% {
+    transform: translateX(0px); } }
+
+@keyframes back-arrow {
+  5% {
+    transform: translateX(-4px); }
+  10% {
+    transform: translateX(2px); }
+  0%, 15%, 100% {
+    transform: translateX(0px); } }

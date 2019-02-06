@@ -18,6 +18,15 @@
 	background: linear-gradient( left, $top 0%, $bottom 100% );
 }
 
+@mixin diagonal-gradient( $deg, $inner, $p1, $outer, $p2 ) {
+	background-color: $outer;
+	background: -moz-linear-gradient( $deg,  $inner $p1, $outer $p2 );
+	background: -webkit-linear-gradient( $deg,  $inner $p1, $outer $p2 );
+	background: -o-linear-gradient( $deg,  $inner $p1, $outer $p2 );
+	background: -ms-linear-gradient( $deg,  $inner $p1, $outer $p2 );
+	background: linear-gradient( $deg,  $inner $p1, $outer $p2 );
+}
+
 @mixin radial-gradient( $outer, $inner, $type: circle ) {
 	background: $outer;
 	background: -moz-radial-gradient( center, $type cover,  $inner 0%, $outer 100% );
@@ -26,4 +35,28 @@
 	background: -o-radial-gradient( center, $type cover,  $inner 0%, $outer 100% );
 	background: -ms-radial-gradient( center, $type cover,  $inner 0%, $outer 100% );
 	background: radial-gradient( center, $type cover,  $inner 0%, $outer 100% );
+}
+
+@mixin keyframes($name){ //Sert à préfixer automatiquement les keyframes
+
+	@-webkit-keyframes #{$name}{ //L'expression #{$expression} reprend ce qui sera donné comme nom dans le fichier scss
+		@content; // Contenu défini dans le fichier scss
+	}
+	@keyframes #{$name}{
+		@content;
+	}
+
+}
+
+@mixin prefix($property, $value, $vendors: webkit moz ms o, $default: TRUE){
+
+	@if $vendors{
+		@each $vendor in $vendors{
+			#{"-" + $vendor + "-" + $property}: #{$value}; //Boucle pour construire les propriétés préfixées
+		}
+	}
+	@if $default == TRUE{
+		#{$property}: #{$value}; //Propriété non préfixée si dernier paramètre non renseigné ou à TRUE
+	}
+
 }

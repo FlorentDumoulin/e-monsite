@@ -1,65 +1,75 @@
 <!doctype html>
 <html lang="fr">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-		<meta name="description" content="Présentation courte de l'outil de création de site internet e-monsite, basé à Amiens.">
-		<meta name="author" content="Florent Dumoulin">
-
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
-		<title>CMS en ligne e-monsite</title>
-
-		<link rel="icon" type="image/x-icon" href="img/favicon.ico" >
-
-		<link rel="stylesheet" href="css/reveal.min.css">
-		<link rel="stylesheet" href="css/theme/custom.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<!-- .slides -->
-
-				<section data-markdown="markdown/slide-1.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
-				<section data-markdown="markdown/slide-2.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
-				<section data-markdown="markdown/slide-3.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
-				<section>
-					<section data-markdown="markdown/slide-4-0.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
-					<section data-markdown="markdown/slide-4-1.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
-					<section data-markdown="markdown/slide-4-2.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
-				</section>
-				<section data-markdown="markdown/slide-5.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
-				<section>
-					<h2>e-monsite en vidéo</h2>
-					<iframe class="stretch" data-src="https://www.youtube.com/embed/IpYxdsDUDQs"></iframe>
-				</section>
-
-				<!-- /.slides -->
-			</div>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	
+	<meta name="description" content="Présentation courte de l'outil de création de site internet e-monsite, basé à Amiens.">
+	<meta name="author" content="Florent Dumoulin">
+	
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	
+	<title>CMS en ligne e-monsite</title>
+	
+	<link rel="icon" type="image/x-icon" href="img/favicon.ico" >
+	
+	<link rel="stylesheet" href="css/reveal.min.css">
+	<link rel="stylesheet" href="fonts/fontawesome/css/all.min.css">
+	<link rel="stylesheet" href="css/theme/custom.css">
+</head>
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<!-- .slides -->
+			
+			<section data-markdown="markdown/slide-1.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
+			<section data-markdown="markdown/slide-2.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
+			<section data-markdown="markdown/slide-3.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
+			<section>
+				<section data-markdown="markdown/slide-4-0.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
+				<section data-markdown="markdown/slide-4-1.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
+				<section data-markdown="markdown/slide-4-2.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
+			</section>
+			<section data-markdown="markdown/slide-5.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
+			<section>
+				<h2>e-monsite en vidéo</h2>
+				<iframe class="stretch" data-src="https://www.youtube.com/embed/IpYxdsDUDQs"></iframe>
+			</section>
+			
+			<!-- /.slides -->
 		</div>
-
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.min.js"></script>
-
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				// Transition style
-				transition: 'fade', // none/fade/slide/convex/concave/zoom
-				// Transition speed
-	            transitionSpeed: 'slow', // default/fast/slow
-				dependencies: [
-					// Interpret Markdown in <section> elements
-		            { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-		            { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					// Speaker notes
-					{ src: 'plugin/notes/notes.js', async: true }
+	</div>
+	
+	<!-- DASHBOARD BTN -->
+	<span id="dashboard">
+		<a href="https://dev.amorce.org/fdumoulin2" title="Retour au tableau de bord">
+			<i class="fas fa-chevron-left"></i>
+		</a>
+	</span>
+	<!-- /DASHBOARD BTN -->
+	
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.min.js"></script>
+	
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			// Transition style
+			transition: 'fade', // none/fade/slide/convex/concave/zoom
+			// Transition speed
+			transitionSpeed: 'slow', // default/fast/slow
+			dependencies: [
+			// Interpret Markdown in <section> elements
+				{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				// Speaker notes
+				{ src: 'plugin/notes/notes.js', async: true }
 				]
 			});
 		</script>
 	</body>
-</html>
+	</html>
+	

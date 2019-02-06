@@ -1,10 +1,10 @@
 /**
- * Custom theme for a e-monsite presentation
- *
- * Author Florent Dumoulin
- */
+* Custom theme for a e-monsite presentation
+*
+* Author Florent Dumoulin
+*/
 
- // Les commentaires uni-ligne ne sont pas visibles une fois le fichier compilé
+// Les commentaires uni-ligne ne sont pas visibles une fois le fichier compilé
 
 // Default mixins and settings -----------------
 @import "../template/mixins";
@@ -44,10 +44,10 @@ $selectionBackgroundColor: $linkColor;
 // ---------------------------------------------
 
 /*********************************************
- * CUSTOM CSS
- *********************************************/
+* CUSTOM CSS
+*********************************************/
 .reveal{
-
+    
     // General
     h2, h3, h4, h5, h6{
         color: $linkColorHover;
@@ -67,7 +67,7 @@ $selectionBackgroundColor: $linkColor;
     ol{
         margin: 0 0 0 1.5em;
     }
-
+    
     // Fragments
     span[class*='fragment']{
         display: inline-block; // Pour pouvoir utilisé les effets dans un span sur une mm ligne
@@ -80,5 +80,42 @@ $selectionBackgroundColor: $linkColor;
             }
         }
     }
+    
+}
+/*============================================
+DASHBOARD
+============================================*/
+#dashboard{
 
+    a{
+        position: fixed;
+        z-index: 999;
+        left: 0;
+        bottom: 10%;
+        padding: 0.5em;
+        color: rgb(66, 91, 138);
+        @include diagonal-gradient( 225deg, rgba(22,32,42,0.95), 0%, rgba(13,19,26,0.95), 77% );
+        border: 4px double #1b2733;
+        border-left: none;
+        @include prefix('box-shadow', '1px 1px 3px' $baseColor00, webkit);
+        @include prefix('transition', '240ms', webkit);
+
+        &:hover, &:focus{
+            padding: 0.5em 1em;
+            color: rgb(103, 142, 214);
+        }
+
+        i{
+            @include prefix('animation', 'back-arrow 5s ease-out infinite', webkit);
+            //propriété css + la valeur + les préfixes vendeurs qu'on veut (sinon tous les préfixes définis dans son mixin seront appliqués)
+            //si on met pas FALSE en dernier paramètre, la propriété sans préfixe sera aussi générée
+        }
+
+    }
+
+}
+@include keyframes(back-arrow) { // Utilise le mixin pour préfixer les keyframes, mixins importés plus haut
+    5% { transform: translateX(-4px); }
+    10% { transform: translateX(2px);}
+    0%, 15%, 100% { transform: translateX(0px); }
 }
